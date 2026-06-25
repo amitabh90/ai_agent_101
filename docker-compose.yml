@@ -1,0 +1,16 @@
+version: '3.8'
+
+services:
+  # PostgreSQL is not included - using existing local container
+  # Update .env file with your existing PostgreSQL connection details
+  
+  pgadmin:
+    image: dpage/pgadmin4:latest
+    container_name: ai_agent_pgadmin
+    environment:
+      PGADMIN_DEFAULT_EMAIL: admin@admin.com
+      PGADMIN_DEFAULT_PASSWORD: admin
+    ports:
+      - "5050:80"
+    network_mode: "host"
+    # pgAdmin will connect to your existing PostgreSQL on localhost:5432
