@@ -12,7 +12,7 @@ def get_llm_client(
     """
     Get LLM client configured with custom base URL and API key.
     
-    Supports any OpenAI-compatible API endpoint (OpenAI, Azure, Zscaler proxy, local models, etc.)
+    Supports any OpenAI-compatible API endpoint (OpenAI, Azure, llm proxy, local models, etc.)
     
     Args:
         model: Model name to use (defaults to settings.llm_model)
